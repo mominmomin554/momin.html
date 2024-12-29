@@ -1,0 +1,74 @@
+html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address to Location</title>
+    <style>
+        body {
+            background-color: #2a2a2a;
+            color: #00ff00;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #00ff00;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ff00;
+            color: #1a1a1a;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TEAM UNKNOWN IP</h1>
+        <h2>Address to Location</h2>
+        <input type="text" id="ipInput" placeholder="Enter IP Address">
+        <button onclick="getLocation()">অনুসন্ধান</button>
+        <div id="result" class="result"></div>
+        <p>DEVELOPER: MH MEHEDI</p>
+    </div>
+
+    <script>
+        function getLocation() {
+            const ipAddress = document.getElementById('ipInput').value;
+            // এখানে API কল করার কোড যুক্ত করা যেতে পারে
+            document.getElementById('result').innerText = 'Result for IP: ' + ipAddress;
+            // আসল API থেকে ফলাফল নিয়ে আসলে এখানে ফলাফল দেখান
+        }
+    </script>
+</body>
+</html>
